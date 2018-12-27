@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity"
     android:background="#000">
 
@@ -17,7 +18,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginHorizontal="10dp"
         android:id="@+id/scan"/>
-    
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,4 +30,15 @@
         android:textColor="#ffff"
         android:gravity="center"/>
 
-</RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate"
+        android:gravity="center"
+        android:background=" #e0e83f "
+        android:textSize="50sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/generate"/>
+
+</LinearLayout>

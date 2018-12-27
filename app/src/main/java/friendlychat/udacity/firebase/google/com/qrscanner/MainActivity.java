@@ -16,7 +16,7 @@ import com.google.android.gms.vision.barcode.Barcode;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button scan;
+    Button scan, generate;
     static final int req_code = 100;
     static final int per_req_code = 200;
     TextView result;
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         scan = findViewById(R.id.scan);
+        generate = findViewById(R.id.generate);
         result = findViewById(R.id.result);
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
@@ -39,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent scanner = new Intent(MainActivity.this,Scanner.class);
                 startActivityForResult(scanner,req_code);
+            }
+        });
+
+        generate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent generator = new Intent(MainActivity.this,QRGenerator.class);
+                startActivity(generator);
             }
         });
 
